@@ -1,0 +1,6 @@
+@WovenWish_HostAddress = http://localhost:5161
+
+GET {{WovenWish_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
