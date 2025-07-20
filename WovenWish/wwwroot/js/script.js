@@ -1,12 +1,5 @@
-﻿const toggleBtn = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
+﻿
+function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('show');
+}
 
-toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('open');
-});
-
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        menu.classList.remove('open');
-    }
-});
