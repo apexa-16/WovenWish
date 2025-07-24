@@ -37,20 +37,37 @@
     text-decoration: none;
     color: #333;
 }
-
 .hero {
-    background: #f9f1f0;
-    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
     text-align: center;
+    padding: 60px 20px;
+    color: black;
 }
 
-.hero-text h1 {
-    font-size: 2rem;
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
-.hero-text p {
-    color: #555;
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fddede82;
+    padding: 10px 5px;
 }
+
+    .hero-text h1 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
 
 .btn {
     display: inline-block;
@@ -61,23 +78,79 @@
     margin-top: 10px;
 }
 
-.categories, .products, .gallery {
+.products {
     padding: 40px 20px;
-    text-align: center;
 }
 
-.category-grid, .product-grid, .gallery-grid {
+    .products h2 {
+        text-align: center;
+    }
+
+.product-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-x: hidden;
+}
+
+.product-row {
     display: flex;
     gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
-    .category-item img, .product-item img, .gallery-grid img {
-        width: 100%;
-        max-width: 200px;
-        border-radius: 10px;
+    .product-row::-webkit-scrollbar {
+        display: none;
     }
+
+.product-item {
+    min-width: 250px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: left;
+    position: relative;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+    .product-item:hover {
+        background: #e0e0e0;
+    }
+
+    .product-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+        transition: filter 0.3s ease;
+    }
+
+    .product-item:hover img {
+        filter: brightness(60%);
+    }
+
+.product-details {
+    padding: 10px;
+}
+
+    .product-details h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    .product-details p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+    }
+
+.product-price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
 
 .footer {
     background: #fddede;
@@ -109,8 +182,14 @@
             padding-left: 20px;
         }
 
+    .header-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
     .hero-text h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .hero {
