@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WovenWish")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc57be81d239ee3f4b9544b7b9bb421fb86eaf43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+090babc0f5f463a05b2f4d4e6b4a5f9e4d94ea09")]
 [assembly: System.Reflection.AssemblyProductAttribute("WovenWish")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WovenWish")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
